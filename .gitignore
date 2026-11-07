@@ -1,0 +1,10 @@
+# Qt generated build folders and files
+build*/
+debug/
+release/
+*.qmake.stash
+Makefile*
+ui_*.h
+*.user
+*.o
+*.obj

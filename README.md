@@ -1,22 +1,48 @@
-# Qt C++ Weather Forecast Application (Standalone Release)
+# Weather Desktop Pro (Qt C++)
 
-A portable desktop weather application built using C++ and the Qt Framework that connects to an external Web API to fetch and display real-time weather data.
+A modern, responsive desktop weather application built with C++17 and Qt Framework. Features real-time weather monitoring, 5-day forecasts, IP-based geolocation, multi-language support, and a clean iOS-inspired dark UI.
 
-## Description
-This application demonstrates GUI development in Qt, network programming, and API integration. It requests current weather parameters for a selected city, parses the JSON response, and displays a short text description alongside core weather metrics.
+## Key Features
 
-The key feature of this repository is its standalone portability. The application has been fully deployed with all required dependencies, meaning it can be executed immediately on any compatible Windows machine without requiring the Qt Framework or Qt Creator to be installed locally.
-
-## Project Specifications & Build Quirks
-- **UI Localization:** The user interface and weather descriptions are currently localized in Ukrainian.
-- **Executable Name:** Due to the initial project template configuration, the pre-compiled binary is named `Flappy_bird.exe`. This is purely a build artifact and does not affect the core weather functionality.
+- **Multi-Language Support (i18n):** Instant UI localization supporting 4 languages (Ukrainian, English, Italian, Russian).
+- **Current Weather & Metrics:** Real-time temperature, "feels like" status, humidity, wind speed, and atmospheric pressure.
+- **5-Day Weather Forecast:** Vertical scrollable daily forecast list powered by OpenWeatherMap API.
+- **IP Geolocation:** Quick auto-detection of user location at the click of a button.
+- **Modern Responsive UI:** Glassmorphism-style dark layout with dynamic window resizing and responsive controls.
 
 ## Tech Stack
-- C++
-- Qt Framework (QtWidgets, QtNetwork)
-- JSON (for API response parsing)
 
-## How to Run
-1. Clone or download this repository to your computer.
-2. Open the `release` directory.
-3. Run the `Flappy_bird.exe` file to launch the application instantly.
+- **Language:** C++17
+- **Framework:** Qt 6 (QtWidgets, QtNetwork)
+- **API:** OpenWeatherMap REST API (JSON parsing)
+- **Build System:** qmake / CMake
+
+## Project Structure
+
+```text
+├── main.cpp                # Application entry point
+├── mainwindow.cpp          # UI layout logic, API handlers & i18n
+├── mainwindow.h            # Main window class interface
+├── mainwindow.ui           # Base Qt Designer layout definition
+├── qt-weather-app.pro      # Qt qmake project configuration
+├── .gitignore              # Git build artifact exclusions
+└── README.md               # Project documentation
+```
+
+## How to Build & Run
+
+### Prerequisites
+- Qt SDK (version 6.x or 5.15+) with MinGW / MSVC compiler toolchain.
+
+### Build Steps
+1. Clone the repository:
+```bash
+git clone https://github.com/madroller12/qt-weather-app.git
+```
+2. Open `qt-weather-app.pro` in **Qt Creator**.
+3. Select your Desktop Kit configuration.
+4. Build and run the project (`Ctrl + R`).
+
+## Standalone Executable Download
+
+To run the application without installing Qt SDK, download the pre-packaged standalone binary from the **[Releases](../../releases)** page.
